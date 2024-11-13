@@ -29,9 +29,9 @@ jobs:
       - name: Generate embeddings
         uses: PieterDePauw/vercel-embeddings-action@v1.0.1
         with:
-		  # Vercel Postgres URL (via GitHub Secrets)
+          # Vercel Postgres URL (via GitHub Secrets)
           database-url: ${{ secrets.POSTGRES_URL }}
-		  # OpenAI API Key (via GitHub Secrets)
-          openai-key: ${{ secrets.OPENAI_API_KEY }}
+          # OpenAI API Key (via GitHub Secrets)
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           # Root directory of the documentation files.
           # docs-root-path:
