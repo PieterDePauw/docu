@@ -17,21 +17,21 @@ jobs:
     steps:
       # Step 1: Set up Node.js version 20
       - name: Set up Node.js 20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.1.0
         with:
           node-version: "20"
 
       # Step 2: Checkout the repository code to access its files in this workflow
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       # Step 3: Generate embeddings for Markdown (or MDX) documentation files
       - name: Generate embeddings
-        uses: PieterDePauw/embeddings-generator-vercel-postgres@v1.0.1
+        uses: PieterDePauw/embeddings-generator-vercel-postgres@latest
         with:
           # Vercel Postgres URL (via GitHub Secrets)
           database-url: ${{ secrets.POSTGRES_URL }}
           # OpenAI API Key (via GitHub Secrets)
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           # Root directory of the documentation files.
-          # docs-root-path:
+          docs-root-path: "docs/"
