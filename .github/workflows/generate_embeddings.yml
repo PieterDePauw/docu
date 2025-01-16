@@ -27,7 +27,7 @@ jobs:
 
       # Step 3: Generate embeddings for Markdown (or MDX) documentation files
       - name: Generate embeddings
-        uses: PieterDePauw/embeddings-generator-vercel-postgres@v1.0.4
+        uses: PieterDePauw/embeddings-generator-vercel-postgres@v1.0.5
         with:
           # Vercel Postgres URL (via GitHub Secrets)
           database-url: ${{ secrets.POSTGRES_URL }}
